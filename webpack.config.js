@@ -13,7 +13,12 @@ const stylesHandler = isProduction
   : "style-loader";
 
 const config = {
-  entry: "./src/index.js",
+  //   entry: {
+  //     slider:'./src/js/slider.js',
+  //     pagination:'./src/js/pagination.js',
+
+  //   },
+  entry: ["./src/index.js", "./src/css/style.scss"],
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -25,6 +30,15 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
+      filename: "index.html",
+    }),
+    // new HtmlWebpackPlugin({
+    //   template: "slider.html",
+    //   filename: "slider.html",
+    // }),
+    new HtmlWebpackPlugin({
+      template: "pagination.html",
+      filename: "pagination.html",
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
