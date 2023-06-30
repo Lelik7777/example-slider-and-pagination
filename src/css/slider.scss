@@ -8,6 +8,15 @@
   margin: auto;
 
   background-color: antiquewhite;
+
+  @media (max-width: 400px) {
+    display: grid;
+    grid-template-areas:
+      "slider slider"
+      "button-left button-right";
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 }
 .button {
   width: 40px;
@@ -15,11 +24,22 @@
   border: none;
   border-radius: 20px;
 }
+.button_left {
+  grid-area: button-left;
+}
+.button_right {
+  grid-area: button-right;
+}
 
 .slider {
   overflow: hidden;
+  grid-area: slider;
   width: 80%;
   height: 100%;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 }
 .cards__container {
   position: relative;
@@ -30,12 +50,25 @@
   display: flex;
   gap: 20px;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    & > li:last-child {
+      display: none;
+    }
+  }
+
+  @media (max-width: 400px) {
+    justify-content: center;
+    & > li:nth-child(2) {
+      display: none;
+    }
+  }
 }
 .card {
   display: flex;
   flex-flow: column;
   gap: 30px;
-  
+
   &:hover {
     cursor: pointer;
   }
