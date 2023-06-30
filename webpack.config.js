@@ -22,6 +22,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
+  devtool: isProduction? 'eval': 'source-map',
   devServer: {
     open: true,
     host: "localhost",
@@ -68,9 +69,12 @@ const config = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        type: "asset/resource",
       },
-
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
