@@ -64,12 +64,4 @@
     }
   }
 }
-.card {
-  display: flex;
-  flex-flow: column;
-  gap: 30px;
 
-  &:hover {
-    cursor: pointer;
-  }
-}
