@@ -22,7 +22,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
-  devtool: isProduction? 'eval': 'source-map',
+  devtool: isProduction ? "eval" : "source-map",
   devServer: {
     open: true,
     host: "localhost",
