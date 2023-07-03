@@ -13,5 +13,14 @@ const CLASSES = {
   SLIDER: ".slider",
   CARDS_CONTAINER: ".cards__container",
 };
-const CONSTANTS = {};
+const CONSTANTS = {
+  BUTTON: "button",
+  DIV: "div",
+  UL: "ul",
+  LI: "li",
+  IMG: "img",
+  BUTTON_LEFT: "button_left",
+  BUTTON_RIGHT: "button_right",
+  
+};
 export { CLASSES, CONSTANTS };
