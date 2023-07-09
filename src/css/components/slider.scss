@@ -44,6 +44,7 @@
 .cards__container {
   position: relative;
   transform: translateX(-100%);
+  display: flex;
   transition: all 2s;
 }
 .cards {
@@ -64,4 +65,3 @@
     }
   }
 }
-
