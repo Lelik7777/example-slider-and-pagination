@@ -21,6 +21,10 @@ const CONSTANTS = {
   IMG: "img",
   BUTTON_LEFT: "button_left",
   BUTTON_RIGHT: "button_right",
-  
+  ARROW_LEFT: "<",
+  ARROW_RIGHT: ">",
+  CLICK: "click",
+  ANIMATION_LEFT: "animation_left",
+  ANIMATION_RIGHT: "animation_right",
 };
 export { CLASSES, CONSTANTS };

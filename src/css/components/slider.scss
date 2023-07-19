@@ -23,6 +23,7 @@
   height: 40px;
   border: none;
   border-radius: 20px;
+  font-size: 2rem;
 }
 .button_left {
   grid-area: button-left;
@@ -43,12 +44,19 @@
 }
 .cards__container {
   position: relative;
-  transform: translateX(-100%);
+  transform: translateX(0);
+  display: flex;
   transition: all 2s;
+}
+.animation_left{
+  transform: translateX(-100%);
+}
+.animation_right{
+  transform: translateX(100%);
 }
 .cards {
   display: flex;
-  gap: 20px;
+  gap: 75px;
   justify-content: space-between;
 
   @media (max-width: 768px) {
@@ -64,4 +72,3 @@
     }
   }
 }
-
