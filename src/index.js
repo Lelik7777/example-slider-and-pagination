@@ -1,9 +1,14 @@
-import "./js/pagination";
-import "./js/slider";
-import { Card } from "./js/Card";
 import { petsJSON } from "./js/dataPets";
-console.log("Hello World!");
+import {
+  createSlider,
+  addButtonLeftHandler,
+  addButtonRightHandler,
+} from "./js/slider";
 
-// const card = new Card(petsJSON[0]);
-// console.log(card);
-// card.render(document.body);
+const countCardsContainers = 3;
+const countCards = 3;
+window.addEventListener("load", () => {
+  createSlider(petsJSON, countCardsContainers, countCards);
+  addButtonLeftHandler();
+  addButtonRightHandler();
+});
